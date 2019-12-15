@@ -1,0 +1,24 @@
+Solution:
+
+Database: Elasticsearch
+Language: Node js
+
+Instructions:
+1. Please edit the file path in data.js file on line number 32 with your system's path where the mock_data.json is located.
+
+2. Install Node js and npm.
+	2.1 Refer https://nodejs.org/en/ for installation.
+
+3. Install elasticsearch using "brew install elasticsearch" and verify if its running by "brew services elasticsearch".
+	3.1 Refer https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html for installation.
+
+4. Run "npm install elasticsearch". This will install Node js elasticsearch client.
+
+5. Run data.js as "node data.js". This will initialise the elasticsearch, create an index in it and insert the mock data from the input data file.
+
+6. Run search.js file.
+	Some use cases mentioned below.
+	6.1: node search.js Corporate
+	6.2: node search.js \"Corporate Integration\"
+	6.3: node search.js \"Corporate Integrat\"
+	6.4: node search.js Corporate Integration
