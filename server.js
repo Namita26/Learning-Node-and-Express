@@ -48,16 +48,14 @@ app.get('/search', (req, res) => {
 	}
 
 	// search for exact match
-	let exact_match_results = [];
-	let non_exact_match_results = [];
-	exact_match_results = search_using_regex(get_regex_for_exact_matching(search_term))
+	let exact_match_results = search_using_regex(get_regex_for_exact_matching(search_term))
 
+	let non_exact_match_results = [];
 	if (req.body.search_term.indexOf("'") == -1){
 		non_exact_match_results = search_using_regex(get_regex_for_non_exact_matching(search_term))
 	}
 
-	let match_results = [];
-	match_results = exact_match_results.concat(non_exact_match_results)
+	let match_results = exact_match_results.concat(non_exact_match_results)
 
 	if (req.body.sort_by != null && req.body.sort_by == "name") {
 		match_results.sort((a, b) => (a.name > b.name) ? 1 : -1)

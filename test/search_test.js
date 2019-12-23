@@ -96,7 +96,7 @@ describe('/GET search', () => {
               res.body.should.have.property('data');
               res.body.should.have.property('message');
               res.body.should.have.property('message').eql('success');
-              res.body.data[0].should.have.property('name').eql('Investor Brand Executive');
+              res.body.data[0].should.have.property('name').eql('Investor Quality Executive');
               res.body.data.length.should.be.eql(3);
               res.body.total_count.should.be.eql(8);
         done();
